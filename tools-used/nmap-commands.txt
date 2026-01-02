@@ -1,0 +1,27 @@
+Tool: Nmap
+Purpose: Network discovery, full port scanning, service and OS enumeration
+
+Connectivity Check:
+ping -c 4 192.168.1.4
+
+Result:
+Target host reachable with 0% packet loss.
+
+--------------------------------------------------
+
+Command Used:
+nmap -A -p- 192.168.1.4
+
+Explanation:
+-A   : Enables OS detection, version detection, script scanning, and traceroute
+-p-  : Scans all 65535 TCP ports
+
+Key Findings:
+- FTP (21/tcp): vsftpd 2.3.4 with anonymous login enabled
+- SMB (139, 445/tcp): Samba 3.0.20-Debian
+- Bind Shell (1524/tcp): Metasploitable root shell
+- Web Server (80/tcp): Apache 2.2.8
+- Multiple legacy and insecure services detected (Telnet, RSH, NFS, VNC)
+
+Conclusion:
+The scan revealed multiple outdated and insecure services, indicating a high attack surface.
