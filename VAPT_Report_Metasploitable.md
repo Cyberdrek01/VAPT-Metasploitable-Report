@@ -12,7 +12,7 @@
 
 An internal Vulnerability Assessment and Penetration Test (VAPT) was conducted against the target host **192.168.1.4**, a deliberately vulnerable system (Metasploitable), to evaluate its security posture.
 
-The assessment identified multiple **Critical severity vulnerabilities** that enabled **unauthorized remote code execution and full system compromise**. The tester successfully bypassed authentication controls and obtained **root (administrative) access** using **two independent attack vectors**.
+The assessment identified multiple **Critical severity vulnerabilities** that enabled **unauthorized remote code execution and full system compromise**. The assessment successfully bypassed authentication controls and obtained **root (administrative) access** using **two independent attack vectors**.
 
 These findings highlight severe misconfigurations and outdated services. Immediate remediation is required to prevent exploitation in real-world environments.
 
@@ -64,8 +64,10 @@ Successful exploitation provides **root-level access**, leading to complete syst
 #### Proof of Concept
 Metasploit module used: exploit/unix/ftp/vsftpd_234_backdoor
 
-Observed output: [*] Command shell session opened
-                  uid=0(root) gid=0(root)
+Observed output: 
+[*] Command shell session opened
+uid=0(root) gid=0(root)
+
 
 
 ---
@@ -86,9 +88,9 @@ Unauthenticated attackers can execute system commands and establish reverse shel
 Metasploit module used: exploit/multi/samba/usermap_script
 
 
-Observed output: [] Started reverse TCP handler
-                 [] Command shell session opened
-
+Observed output: 
+[] Started reverse TCP handler
+[] Command shell session opened
 
 ---
 
@@ -102,6 +104,7 @@ An unsecured bind shell was discovered listening on port **1524**, allowing dire
 
 #### Impact
 This backdoor provides immediate unauthorized system access.
+This service is commonly left behind as a debugging or backdoor mechanism and represents a severe security misconfiguration.
 
 ---
 
@@ -127,16 +130,25 @@ The vulnerabilities identified pose an **extreme risk** to confidentiality, inte
 #### Network Security
 - Restrict access to ports **21, 139, 445, and 1524** using firewall rules.
 - Apply network segmentation to limit lateral movement.
+---
+## 7. Skills Demonstrated
+
+- Network and service enumeration using Nmap
+- Vulnerability identification and analysis
+- Exploitation using Metasploit Framework
+- Understanding of CVSS severity ratings
+- Post-exploitation privilege verification
+- Professional penetration testing reporting
 
 ---
 
-## 7. Conclusion
+## 8. Conclusion
 
 The penetration test demonstrated that the target system is **critically insecure** and vulnerable to complete compromise via multiple attack paths. Implementing the recommended remediation steps will significantly enhance the system’s security posture.
 
 ---
 
-## 8. Legal Disclaimer
+## 9. Legal Disclaimer
 
 This assessment was conducted **strictly for educational purposes** in a controlled lab environment on an intentionally vulnerable system.  
 Unauthorized testing of systems without permission is illegal. The author assumes no responsibility for misuse of this information.
