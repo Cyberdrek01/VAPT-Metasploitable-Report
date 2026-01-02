@@ -1,0 +1,26 @@
+Netcat was used for manual interaction and verification
+of shell access.
+
+Commands Used:
+
+1. Connecting to bind shell on port 1524:
+nc 192.168.1.4 1524
+
+Purpose:
+To verify the presence of an unsecured bind shell and
+obtain command-line access.
+
+Result:
+Shell access obtained without authentication.
+
+--------------------------------------------------
+
+2. Listener for reverse shell:
+nc -lvnp 4444
+
+Purpose:
+To listen for incoming reverse shell connections during
+exploitation.
+
+Result:
+Successful connection received from target system.
