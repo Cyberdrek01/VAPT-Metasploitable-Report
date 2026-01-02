@@ -1,0 +1,27 @@
+Metasploit Framework was used to exploit identified vulnerabilities.
+
+Exploits Used:
+
+1. vsftpd v2.3.4 Backdoor Exploit
+Module:
+exploit/unix/ftp/vsftpd_234_backdoor
+
+Purpose:
+Exploits a malicious backdoor present in vsftpd version 2.3.4
+to gain a remote root shell.
+
+Result:
+Successful exploitation resulted in root-level access.
+
+--------------------------------------------------
+
+2. Samba Usermap Script Remote Code Execution
+Module:
+exploit/multi/samba/usermap_script
+
+Purpose:
+Exploits a misconfigured username map script in Samba to
+execute arbitrary commands as root.
+
+Result:
+Successful reverse shell connection established.
