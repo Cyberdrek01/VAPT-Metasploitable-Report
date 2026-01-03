@@ -65,7 +65,7 @@ These findings confirm that the target system is **critically insecure** and vul
 ## 📄 Project Files
 
 - 📘 **[VAPT_Report_Metasploitable.md](./report/VAPT_Report_Metasploitable.md)** – Detailed technical report  
-- 📷 **[Screenshots](./Screenshots)**-Contains the images of the testing
+- 📷 **[Screenshots](./screenshots)**-Contains the images of the testing
 - 🛠️ **[Tools Used](./tools-used)**-Contains all the tools used in the testing
 - ⚠ **[disclaimer.md](./disclaimer.md)** – Legal & ethical usage disclaimer  
 
